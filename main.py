@@ -228,7 +228,7 @@ class SimplePDFHeadingExtractor:
         return False
 
 def extract_pdf_headings(pdf_path: str) -> List[Dict[str, any]]:
-    extractor = SimplePDFHeadingExtractor(font_size_threshold=1.5)
+    extractor = SimplePDFHeadingExtractor()
     return extractor.extract_headings(pdf_path)
 
 def get_subsection_between_headings(text, start_heading, end_heading):
