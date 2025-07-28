@@ -1,0 +1,14 @@
+pymupdf
+sentence-transformers
+torch
+transformers
+numpy
+scikit-learn
+scipy
+tqdm
+huggingface-hub
+filelock
+requests
+regex
+typing-extensions
+packaging
