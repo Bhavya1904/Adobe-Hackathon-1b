@@ -111,3 +111,15 @@ docker rm my-pdf-processing-run
 **Note:**  
 - The script expects the input JSON to be named `Challenge1b_input.json` and PDFs to be in the `input` folder.
 - The output will be saved as `challenge1b_output.json` in the container's `/app` directory.
+- Here's what each command does:
+
+1. **`docker build -t pdf-processor:latest .`**
+   - Builds a Docker image from the Dockerfile in the current directory and tags it as "pdf-processor:latest"
+
+2. **`docker run -v "$(pwd)/input:/app/input" -v "$(pwd):/app/output" --rm pdf-processor:latest`**
+   - Runs the container, mounts your local `input` folder to `/app/input` inside container and current directory to `/app/output`, then automatically deletes the container when done
+
+3. **`docker run --name pdf-proc -v "$(pwd):/app" pdf-processor:latest`**
+   - Runs the container with name "pdf-proc", mounts your entire current directory to `/app` inside the container (so container can read/write files directly to your local folder)
+
+The third command is the most useful as it gives the container full access to your project directory.
