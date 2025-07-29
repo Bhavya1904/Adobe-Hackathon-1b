@@ -426,7 +426,6 @@ def process_pdfs():
     with open(output_file, "w") as f:
         json.dump(final_output, f, indent=2)
         
-import time
 if __name__ == "__main__":
     
     print("Starting processing pdfs")
