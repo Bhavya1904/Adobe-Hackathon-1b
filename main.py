@@ -428,11 +428,8 @@ def process_pdfs():
         
 import time
 if __name__ == "__main__":
-    start_time = time.time()   # Start timer
     
     print("Starting processing pdfs")
     process_pdfs()
     print("Completed processing pdfs")
     
-    end_time = time.time()     # End timer
-    print(f"Execution time: {end_time - start_time:.2f} seconds")
